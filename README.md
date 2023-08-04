@@ -1,6 +1,8 @@
 # Ros-installation-in-windows-
 ## step1 : Donwload and Install VirtualBox
+Begin by downloading VirtualBox from the official website: https://www.virtualbox.org/wiki/Downloads. 
 
+Follow the installation instructions based on your operating system.
 
 
 ## step2 : Donwlaod Unbntu Image 
@@ -18,4 +20,4 @@
 
 
 
-# step6 : install the Robot arm package 
+## step6 : install the Robot arm package 
