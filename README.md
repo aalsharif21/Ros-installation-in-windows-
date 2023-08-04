@@ -24,7 +24,39 @@ Before starting the virtual machine, right-click on it in VirtualBox and select 
 
 
 ## step5 : Install Ubuntu in Virtal machine 
+- Start the virtual machine, and it will boot from the Ubuntu ISO image.
+- Follow the on-screen instructions to install Ubuntu as you would on a regular system.
+- Once the installation is complete, the virtual machine will restart, and you will have a fresh Ubuntu installation.
 
+### 5.1 Open Terminal on Ubuntu:
+After Ubuntu is installed in the virtual machine, open the Terminal by clicking on the "Activities" button in the top-left corner, searching for "Terminal," and launching it.
+
+### 5.2 Install ROS Noetic:
+In the Terminal, execute the following commands to install ROS Noetic:
+
+```
+bash
+sudo apt update
+sudo apt install -y curl gnupg2 lsb-release
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt update
+sudo apt install -y ros-noetic-desktop-full
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 5.3 Create a Catkin Workspace:
+In the Terminal, create a catkin workspace to organize your ROS packages:
+
+```
+bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin_make
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
 
 
 ## step6 : install the Robot arm package 
