@@ -19,6 +19,7 @@ Choose the appropriate version, such as Ubuntu 20.04 LTS.
 
 
 ## step4 : Configure Virtual Macine Settings 
+Before starting the virtual machine, right-click on it in VirtualBox and select "Settings." In the settings, navigate to the "Storage" tab and add the Ubuntu ISO image to the virtual CD/DVD drive as the installation medium.
 
 
 
@@ -27,3 +28,12 @@ Choose the appropriate version, such as Ubuntu 20.04 LTS.
 
 
 ## step6 : install the Robot arm package 
+Finally, use the Terminal to install the Robot Arm package (replace "robot_arm_package" with the actual package name):
+
+```
+bash
+sudo apt install ros-noetic-robot-arm-package
+```
+
+
+With these steps completed, you now have a virtual machine with Ubuntu, ROS Noetic installed, and the Robot Arm package ready to be used for your robotics projects. Ensure to refer to official ROS documentation for further information on working with ROS and the Robot Arm package.
